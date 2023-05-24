@@ -4,6 +4,7 @@
     --main-color:white;
     --fs:1.5rem;
     --fw:700;
+    --s-color:#0ef;
 }
 *{
     margin: 0;
@@ -23,12 +24,15 @@ a{
     font-size: 1rem;
 }
 
-.toogle{
+.navbar .toggle{
     color: var(--main-color);
     cursor: pointer;
     display: none;
 }
 /* Header */
+
+
+
 header{
     position: relative;
     padding: 0 2rem;
@@ -46,4 +50,55 @@ header{
 .navbar .links{
     display: flex;
     gap: 2rem;
+}
+.navbar .links a{
+    transition: .2s ease;
+}
+.navbar .links a:hover{
+    color: #0ef;
+
+}
+.burgerMenu{
+    display: none;
+    position: absolute;
+    right: 2rem;
+    top: 2rem;
+    width: 250px;
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(15px);
+    border-radius: 1.9rem;
+    height: 0;
+    overflow: hidden;
+}
+.burgerMenu.open{
+    height: auto;
+}
+.burgerMenu li{
+    padding: .75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.burgerMenu li a:hover{
+    color: #0ef;
+}
+
+
+@media screen and (max-width : 900px){
+    .navbar .links{
+        display: none;
+    }
+    .navbar .toggle{
+        display: block;
+    }
+    .burgerMenu{
+        display: block;
+    }
+}
+@media screen and (max-width : 600px){
+    .navbar .logo{
+        display: flex;
+        width: unset;
+    }
+    
 }

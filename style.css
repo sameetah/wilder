@@ -84,8 +84,8 @@ main{
       flex-direction: column;
     }
 
-    .image-container h2{
-        
+    .image{
+        height: 70vh;
     }
   }
 

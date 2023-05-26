@@ -1,4 +1,4 @@
-/*const toggleButton = document.querySelector(".toggle");
+const toggleButton = document.querySelector(".toggle");
 const toggleButtonIcon = document.querySelector(".toggle i");
 const burgerMenu = document.querySelector(".burgerMenu");
 
@@ -9,7 +9,7 @@ toggleButton.onclick = function(){
     ? "fa-solid fa-xmark"
     : "fa-solid fa-bars"
 }
-*/
+
 
 
 

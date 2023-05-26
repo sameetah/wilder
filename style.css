@@ -1,15 +1,33 @@
-:root{
+:root {
     background-color: #D3D3D3;
 }
 
-*{
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: sans-serif;
 }
+
 /* Alberto part is header*/
 
+@media only screen and (max-width: 600px) {
+    .navbar {
+        justify-content: space-between;
+    }
+
+    .logo {
+        transform: scale(0.8);
+    }
+
+    .toggle {
+        display: inline-block;
+    }
+
+    ul {
+        display: none;
+    }
 
 
 .navbar {
@@ -98,16 +116,17 @@ a:hover {
 
 
 
-main{
+main {
     display: flex;
-  justify-content: center;
-  align-items: center;
+    justify-content: center;
+    align-items: center;
 
- 
-  padding:80px 0;
-  
+
+    padding: 80px 0;
+
 
 }
+
 .image-container {
     display: flex;
     justify-content: center;
@@ -122,15 +141,18 @@ main{
     height: 300px; /* Adjust this value to your desired size */
     border-radius: 50%;
     object-fit: cover;
-    margin: 0 40px; /* Adjust this value to add spacing between images */
-    
+    margin: 0 40px;
+    /* Adjust this value to add spacing between images */
+
     box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3);
-    
-    
-    
-   
-  }
-  .image-container h2,img{
+
+
+
+
+}
+
+.image-container h2,
+img {
     opacity: 0.8;
     position: relative;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
@@ -139,22 +161,23 @@ main{
   }
   .image-container .image:hover  {
     transition: transform 0.8s ease-in;
-    transform: scale(1.3); /* Increase the value to make the image grow more */
-  }
-  .image-container .image:not(:hover){
+    transform: scale(1.3);
+    /* Increase the value to make the image grow more */
+}
+
+.image-container .image:not(:hover) {
     transition: transform 0.9s ease-in;
     transform: scale(1);
-  }
-  
-.image
-{
-    display:flex;
+}
+
+.image {
+    display: flex;
     justify-content: center;
     flex-direction: column;
     text-align: center;
-    gap:50px 0;
-    
-   
+    gap: 50px 0;
+
+
 }
 
 .hidden{display: none;}
@@ -162,12 +185,11 @@ main{
 
 @media (max-width: 1139px) {
     .image-container {
-      flex-direction: column;
+        flex-direction: column;
     }
 
     .image{
         height: 70vh;
     }
   }
-  
-
+}

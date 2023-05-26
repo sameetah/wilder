@@ -1,3 +1,4 @@
+/* Script for bar menu ==>>> */
 const toggleButton = document.querySelector(".toggle");
 const toggleButtonIcon = document.querySelector(".toggle i");
 const burgerMenu = document.querySelector(".burgerMenu");

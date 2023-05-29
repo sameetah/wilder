@@ -1,55 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <title>Wilder Crew Member</title>
-</head>
-
-<body>
-  <header>
-    <div class="navbar">
-      <div class="logo">
-        <h1>Wilder</h1>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Wilder Crew Member</title>
+  </head>
+  <body>
+    <header>
+      <div class="navbar">
+          <div class="logo"><h1 id="wilder">Wilder</h1></div>
+          <ul>
+              <li><a href="crew.html" id= "Crew">Crew</a></li>
+              <li><a href="#name-section" id="game">Name</a></li>
+          </ul>
+          <div class="toogle" style="float:right" >
+              <i class="fa-solid fa-bars"></i>
+              <div class ="dropdown-content">
+              <a href="crew">7 wonders</a>
+              <a href="Solar">Planets</a>
+              <a href="Galaxy">Galaxy</a>
+          </div>
+          </div>
       </div>
-      <ul>
-        <li><a href="crew.html" id="Crew">Crew</a></li>
-        <li><a href="#">Name</a></li>
-      </ul>
-      <!-- For burger bar -->
-
-      <div class="toggle">
-        <i class="fa-solid fa-bars"></i>
-        <div class="dropdown-content">
-          <a href="crew.html">Crew</a>
-          <a href="Name">Name</a>
+  </header>
+  <body>
+    <main>
+      <div id="section1" >
+      <div class="container">
+      <div class="image-container">
+        <div class="image">
+          <img src= "marco-biondi-0apwACX-W2Y-unsplash.jpg"/>
+          <h2>Sameetah</h2>
+        </div>
+        <div class="image">
+          <img src="raoul-droog-yMSecCHsIBc-unsplash.jpg"/>
+          <h2>Alberto</h2>
+        </div>
+        <div class="image">
+          <img src="bogdan-farca-CEx86maLUSc-unsplash.jpg" />
+          <h2>Adit</h2>
         </div>
       </div>
+      </div>
     </div>
-  </header>
-  <main>
+  </div>
+  <div id="section2" class="hidden">
+  <div class="container">
     <div class="image-container">
       <div class="image">
-        <img src="marco-biondi-0apwACX-W2Y-unsplash.jpg" />
-        <h2>Sameetah</h2>
+        <img src="alexander-andrews-yOIT88xWkbg-unsplash.jpg" />
+        <h2>Planets</h2>
       </div>
       <div class="image">
-        <img src="raoul-droog-yMSecCHsIBc-unsplash.jpg" />
-        <h2>Alberto</h2>
+        <img src="vatra-voda-_P5F9l4XNMA-unsplash.jpg" />
+        <h2>Seven Wonders of the World</h2>
       </div>
       <div class="image">
-        <img src="bogdan-farca-CEx86maLUSc-unsplash.jpg" />
-        <h2>Adit</h2>
+        <img src="jeremy-thomas-E0AHdsENmDg-unsplash.jpg" />
+        <h2>Galaxy</h2>
       </div>
     </div>
     </div>
-  </main>
+  </div>
+</div>
+    </main>
 
   <script src="script.js"></script>
 </body>

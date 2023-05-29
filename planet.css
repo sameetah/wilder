@@ -1,0 +1,226 @@
+:root {
+    --main-color: #fff;
+    --bg-color: rgb(6, 11, 25);
+    --border-color: rgba(255, 255, 255, 0.1);
+    --text-size: 14px;
+    --logo : 40px;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+    color: var(--main-color);
+    text-decoration: none;
+}
+
+body {
+    background-color: var(--bg-color);
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* top>Navbar */
+nav {
+    display: flex;
+    width: 100%;
+    border: 1px solid var(--border-color);
+}
+
+nav .section {
+    padding: 1.5rem 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1;
+    border-left: 1px solid var(--border-color);
+
+}
+
+#logo {
+    flex-grow: 1;
+    justify-content: flex-start;
+    font-size: var(--logo);
+}
+
+/* Main setting for article  */
+main {
+    flex-grow: 1;
+    position: relative;
+}
+
+main>article {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 2fr 1fr;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+}
+
+main>article .article-section {
+    height: 100%;
+    border: 1px solid var(--border-color);
+}
+main>article h2{
+    text-align: center;
+    margin-top: .2rem;
+}
+main>article .title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: var(--logo);
+}
+
+main>article .nav {
+    display: flex;
+    justify-content: space-around;
+}
+
+/* Setting for transition slider */
+main>article[data-status="inactive"] {
+    transform: translateX(-100%);
+    transition: none;
+}
+
+main>article[data-status="active"] {
+    transform: translateX(0%);
+    transition: transform 300ms ease;
+}
+
+main>article[data-status="before"] {
+    transform: translateX(-100%);
+}
+
+main>article[data-status="after"] {
+    transform: translateX(100%);
+}
+
+main>article[data-status="becoming-active-from-before"] {
+    transform: translateX(-100%);
+    transition: none;
+}
+
+main>article[data-status="becoming-active-from-after"] {
+    transform: translateX(100%);
+    transition: none;
+}
+
+/* Setting for buttons */
+main>article .nav .btn {
+    font-size: var(--logo);
+    background-color: var(--bg-color);
+    cursor: pointer;
+    width: 100%;
+    border: 1px solid var(--border-color);
+
+}
+
+/* Setting for innex text */
+main>article .facts p {
+    padding: .6rem;
+    line-height: 1.5;
+    font-weight: 200;
+}
+
+main>article .facts h3 {
+    color: #e83f6f;
+    text-align: center;
+    padding-top: 10px;
+    font-weight: bold;
+}
+main>article .title h2{
+    color: #e83f6f;
+
+}
+
+/* Image setting */
+main>article .image-mercury {
+    background-image: url("mercury.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+main>article .image-venus {
+    background-image: url("venus.jpg");
+    background-position: center;
+    background-size: cover;
+}
+main>article .image-earth {
+    background-image: url("earth.jpg");
+    background-position: center;
+    background-size: cover;
+}
+main>article .image-mars{
+    background-image: url("mars.jpg");
+    background-position: center;
+    background-size: cover;
+}
+main>article .image-jupiter{
+    background-image: url("jupiter.jpg");
+    background-position: center;
+    background-size: cover;
+}
+main>article .image-saturn{
+    background-image: url("saturn.jpg");
+    background-position: center;
+    background-size: cover;
+}
+main>article .image-uranus{
+    background-image: url("uranus.jpg");
+    background-position: center;
+    background-size: cover;
+}
+main>article .image-neptune{
+    background-image: url("neptune.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+/* Responsive */
+@media screen and (max-width: 1200px) {
+    main>article {
+        grid-template-columns: none;
+        grid-template-rows: 1.5fr repeat(3, 0.75fr) 0.25fr;
+        height: max(850px, 100%);
+    }
+    main>article .title {
+        font-size: 18px;
+    }
+
+    main>article .facts {
+        font-size: 12px;
+    }
+
+    main>article span {
+        font-size: 18px;
+        font-weight: 300;
+    }
+
+    main>article p{
+        line-height: .4;
+    }
+
+    main>article .image-mercury {
+        order: 1;
+    }
+
+    main>article .title {
+        order: 2;
+    }
+    main >article .facts {
+        order: 3;
+    }
+    main>article .nav{
+        order: 4;
+        min-height: 50px;
+    }
+
+}

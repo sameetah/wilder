@@ -72,13 +72,13 @@ main .card {
 main .card .content {
     padding: 20px;
     text-align: center;
-    transform: translateY(400px);
+    transform: translateX(400px);
     opacity: 0;
     transition: .5s;
 }
 
 main .card:hover .content {
-    transform: translateY(0px);
+    transform: translateX(0px);
     opacity: 1;
 }
 

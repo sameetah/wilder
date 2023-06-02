@@ -146,49 +146,49 @@ main>section .title h2 {
 
 /* Image setting */
 main>section .image-mercury {
-    background-image: url("mercury.jpg");
+    background-image: url("planet/mercury.jpg");
     background-position: center;
     background-size: cover;
 }
 
 main>section .image-venus {
-    background-image: url("venus.jpg");
+    background-image: url("planet/venus.jpg");
     background-position: center;
     background-size: cover;
 }
 
 main>section .image-earth {
-    background-image: url("earth.jpg");
+    background-image: url("planet/earth.jpg");
     background-position: center;
     background-size: cover;
 }
 
 main>section .image-mars {
-    background-image: url("mars.jpg");
+    background-image: url("planet/mars.jpg");
     background-position: center;
     background-size: cover;
 }
 
 main>section .image-jupiter {
-    background-image: url("jupiter.jpg");
+    background-image: url("planet/jupiter.jpg");
     background-position: center;
     background-size: cover;
 }
 
 main>section .image-saturn {
-    background-image: url("saturn.jpg");
+    background-image: url("planet/saturn.jpg");
     background-position: center;
     background-size: cover;
 }
 
 main>section .image-uranus {
-    background-image: url("uranus.jpg");
+    background-image: url("planet/uranus.jpg");
     background-position: center;
     background-size: cover;
 }
 
 main>section .image-neptune {
-    background-image: url("neptune.jpg");
+    background-image: url("planet/neptune.jpg");
     background-position: center;
     background-size: cover;
 }

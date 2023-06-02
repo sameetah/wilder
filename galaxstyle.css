@@ -1,0 +1,194 @@
+
+:root {
+    --main-color: #fff;
+    --bg-color: rgb(12, 17, 32);
+    --border-color: rgba(255, 255, 255, 0.1);
+    --text-size: 14px;
+    --logo: 40px;
+}
+
+*{
+    margin: 0;
+    padding: 0; 
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body {
+    background-color: #bbb;
+    width: 100%;
+}
+
+
+
+
+.zone {
+    cursor: pointer;
+    color: #FFF;
+    font:size-2em;
+    border-radius:4px;
+    border:1px solid #bbb;
+    transition: all 0.3s linear;
+}
+
+.zone:hover {
+   
+    box-shadow: rgba(0,0,0,0.8) 0px 5px 15px, inset  rgba(0,0,0,0.15) 0px -10px 20px;
+}
+.box:hover {
+    transform:scale(1.1);
+}
+nav {
+    display: flex;
+    width: 100%;
+    padding: 0.3rem;
+    border: 1px solid var(--border-color);
+    margin-bottom: 25px;
+    background-color: #444;
+}
+
+
+nav .section {
+    padding: .50rem 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1;
+    border-left: 1px solid var(--border-color);
+
+
+}
+
+
+#logo {
+    flex-grow: 1;
+    justify-content: flex-start;
+    font-size: var(--logo);
+}
+
+a{
+    text-decoration: none;
+    color: aliceblue;
+    
+}
+
+a:hover {
+        color:grey;
+}
+
+
+
+
+ul>li {
+    padding: 20px;
+    list-style: none;
+}
+
+
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60vh;
+
+}
+
+.cover {
+    background-position: left top;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+    margin-bottom: 50px;
+    
+}
+
+.grid-wrapper {
+    display: grid;
+    grid-gap: 40px;
+    margin-inline: 50px;
+    grid-template-areas:
+    "zone1 zone2"
+    "zone3 zone4"
+    "zone5 zone6"
+    "zone7 zone8"
+
+}
+
+
+.box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color:#444;
+    padding: 1rem;
+}
+
+.zone {
+    list-style-type: none;
+}
+
+
+li>a>h2 {
+    
+    margin-bottom: 5px;
+}
+
+li>a>h4 {
+    text-align: justify;
+}
+
+.card{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 100%;
+}
+
+.card>img{
+    width: 80%;
+    height: 50%;
+}
+
+footer{
+    text-align: right; 
+    background-color: black;
+    padding: 1.5rem;
+    margin-top: 40px;
+}
+
+
+
+@media only screen and (max-width: 600px) {
+    
+    .cover {
+        width: 100%;
+
+    }
+    nav {
+      justify-content: space-between;   
+    }
+
+    #logo {
+        transform: scale(0.8);
+    }
+    .toogle {
+    display: inline-block;
+    }
+    ul {
+        display: none;   
+    }
+    .grid-wrapper{
+        margin: inline 20px;;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        
+    }    
+  
+    li>a>h2 {
+        display: flex;
+        text-align: center;
+        margin-top: 10px;
+    }
+  }

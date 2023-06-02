@@ -3,7 +3,7 @@
     --bg-color: rgb(6, 11, 25);
     --border-color: rgba(255, 255, 255, 0.1);
     --text-size: 14px;
-    --logo : 40px;
+    --logo: 40px;
 }
 
 * {
@@ -31,7 +31,7 @@ nav {
 }
 
 nav .section {
-    padding: .70rem 2rem;
+    padding: .50rem 2rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -46,13 +46,13 @@ nav .section {
     font-size: var(--logo);
 }
 
-/* Main setting for article  */
+/* Main setting for section  */
 main {
     flex-grow: 1;
     position: relative;
 }
 
-main>article {
+main>section {
     height: 100%;
     width: 100%;
     display: grid;
@@ -64,57 +64,59 @@ main>article {
 
 }
 
-main>article .article-section {
+main>section .section-section {
     height: 100%;
     border: 1px solid var(--border-color);
 }
-main>article h2{
+
+main>section h2 {
     text-align: center;
     margin-top: .2rem;
 }
-main>article .title {
+
+main>section .title {
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: var(--logo);
 }
 
-main>article .nav {
+main>section .nav {
     display: flex;
     justify-content: space-around;
 }
 
 /* Setting for transition slider */
-main>article[data-status="inactive"] {
+main>section[data-status="inactive"] {
     transform: translateX(-100%);
     transition: none;
 }
 
-main>article[data-status="active"] {
+main>section[data-status="active"] {
     transform: translateX(0%);
     transition: transform 300ms ease;
 }
 
-main>article[data-status="before"] {
+main>section[data-status="before"] {
     transform: translateX(-100%);
 }
 
-main>article[data-status="after"] {
+main>section[data-status="after"] {
     transform: translateX(100%);
 }
 
-main>article[data-status="becoming-active-from-before"] {
+main>section[data-status="becoming-active-from-before"] {
     transform: translateX(-100%);
     transition: none;
 }
 
-main>article[data-status="becoming-active-from-after"] {
+main>section[data-status="becoming-active-from-after"] {
     transform: translateX(100%);
     transition: none;
 }
 
 /* Setting for buttons */
-main>article .nav .btn {
+main>section .nav .btn {
     font-size: var(--logo);
     background-color: var(--bg-color);
     cursor: pointer;
@@ -124,61 +126,68 @@ main>article .nav .btn {
 }
 
 /* Setting for innex text */
-main>article .facts p {
+main>section .facts p {
     padding: .6rem;
     line-height: 1.5;
     font-weight: 200;
 }
 
-main>article .facts h3 {
+main>section .facts h3 {
     color: #e83f6f;
     text-align: center;
     padding-top: 10px;
     font-weight: bold;
 }
-main>article .title h2{
+
+main>section .title h2 {
     color: #e83f6f;
 
 }
 
 /* Image setting */
-main>article .image-mercury {
+main>section .image-mercury {
     background-image: url("mercury.jpg");
     background-position: center;
     background-size: cover;
 }
 
-main>article .image-venus {
+main>section .image-venus {
     background-image: url("venus.jpg");
     background-position: center;
     background-size: cover;
 }
-main>article .image-earth {
+
+main>section .image-earth {
     background-image: url("earth.jpg");
     background-position: center;
     background-size: cover;
 }
-main>article .image-mars{
+
+main>section .image-mars {
     background-image: url("mars.jpg");
     background-position: center;
     background-size: cover;
 }
-main>article .image-jupiter{
+
+main>section .image-jupiter {
     background-image: url("jupiter.jpg");
     background-position: center;
     background-size: cover;
 }
-main>article .image-saturn{
+
+main>section .image-saturn {
     background-image: url("saturn.jpg");
     background-position: center;
     background-size: cover;
 }
-main>article .image-uranus{
+
+main>section .image-uranus {
     background-image: url("uranus.jpg");
     background-position: center;
     background-size: cover;
 }
-main>article .image-neptune{
+
+main>section .image-neptune {
     background-image: url("neptune.jpg");
     background-position: center;
     background-size: cover;
@@ -186,44 +195,39 @@ main>article .image-neptune{
 
 /* Responsive */
 @media screen and (max-width: 1200px) {
-    main>article {
+    main>section {
         grid-template-columns: none;
-        grid-template-rows: 1fr 0.30fr 1fr 0.30fr;
-        height: max(850px, 100%);
+        grid-template-rows: 0.80fr 0.10fr 1fr 0.10fr;
+        height: max(500px, 100%);
     }
-    main>article .title {
-        padding: 0;
+
+    main>section .title {
+        padding: 0.20rem;
         margin: 0;
         font-size: 18px;
     }
-    main{
-        overflow: scroll;
-    }
 
-    main>article .facts {
+    main>section .facts {
         font-size: 12px;
     }
 
-    main>article span {
-        font-size: 18px;
-        font-weight: 300;
-    }
-
-    main>article p{
+    main>section p {
         line-height: .4;
     }
 
-    main>article .image-mercury {
+    main>section .image-mercury {
         order: 1;
     }
 
-    main>article .title {
+    main>section .title {
         order: 2;
     }
-    main >article .facts {
+
+    main>section .facts {
         order: 3;
     }
-    main>article .nav{
+
+    main>section .nav {
         order: 4;
         min-height: 50px;
     }

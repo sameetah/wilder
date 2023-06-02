@@ -11,11 +11,11 @@
     text-decoration: none;
 }
 
-body{
+body {
     background-image: url("https://images.unsplash.com/photo-1533578448779-71eb335c0d95?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1469&q=80");
     background-size: cover;
-    display: flex;
-    flex-wrap: wrap;
+    display: block;
+    text-align: center;
 }
 
 nav {
@@ -39,6 +39,14 @@ nav .logo {
     font-size: 40px;
     flex-grow: 1;
 }
+
+body .title h1 {
+    font-size: 4rem;
+    background: -webkit-linear-gradient(90deg, rgba(30, 10, 0, 1) 13%, rgba(237, 94, 94, 1) 39%, rgba(166, 0, 255, 1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
 
 /*  All Sections deleted since multpile pages are better */
 
@@ -82,14 +90,6 @@ main .card:hover .content {
     opacity: 1;
 }
 
-main .card .content h2 {
-    position: absolute;
-    top: -50px;
-    right: 20px;
-    font-size: 8rem;
-    color: rgba(255, 255, 255, 0.05);
-}
-
 main .card .content h3 {
     font-size: 1.7rem;
     color: #e83f6f;
@@ -118,5 +118,3 @@ main .card .content a {
     font-weight: 500;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
 }
-
-

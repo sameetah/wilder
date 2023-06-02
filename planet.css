@@ -1,6 +1,6 @@
 :root {
     --main-color: #fff;
-    --bg-color: rgb(6, 11, 25);
+    --bg-color: rgb(12, 17, 32);
     --border-color: rgba(255, 255, 255, 0.1);
     --text-size: 14px;
     --logo: 40px;
@@ -118,10 +118,10 @@ main>section[data-status="becoming-active-from-after"] {
 /* Setting for buttons */
 main>section .nav .btn {
     font-size: var(--logo);
+    border: 1px solid var(--border-color);
     background-color: var(--bg-color);
     cursor: pointer;
     width: 100%;
-    border: 1px solid var(--border-color);
 
 }
 
@@ -198,7 +198,6 @@ main>section .image-neptune {
     main>section {
         grid-template-columns: none;
         grid-template-rows: 0.80fr 0.10fr 1fr 0.10fr;
-        height: max(500px, 100%);
     }
 
     main>section .title {
@@ -232,4 +231,10 @@ main>section .image-neptune {
         min-height: 50px;
     }
 
+}
+
+@media screen and (max-width: 350px) {
+    body {}
+
+    ;
 }

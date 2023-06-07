@@ -7,10 +7,10 @@
   --t-color: #e83f6f;
 }
 
-
 * {
   margin: 0;
   padding: 0;
+
   box-sizing: border-box;
   font-family: sans-serif;
   text-decoration: none;
@@ -67,7 +67,7 @@ nav .dropdown {
   display: none;
   position: absolute;
   right: 2rem;
-  top: 4rem;
+  top: 4.4rem;
   width: 250px;
   background: var(--bg-color);
   border-radius: 10px;
@@ -91,193 +91,50 @@ nav .dropdown.open a:hover {
 }
 
 
-/* Alberto part is header*/
+/* Sameetah part is main */
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-@media only screen and (max-width: 600px) {
-  .navbar {
-    justify-content: space-between;
-  }
+  padding: 80px 0;
+}
 
-  .logo {
-    transform: scale(0.8);
-  }
+.image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-  .toggle {
-    display: inline-block;
-  }
+.image {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  gap: 50px 0;
+  height: 70vh;
+}
 
-  ul {
-    display: none;
-  }
+.image img {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0 40px;
 
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3);
+}
 
-  .navbar {
-    display: flex;
-    justify-content: space-between;
-    color: aliceblue;
-    background-color: rgb(8, 6, 6);
-    height: 4rem;
-    align-items: center;
+.image-container h2,
+img {
+  opacity: 0.8;
+  position: relative;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
 
-  }
-
-  .logo {
-    margin: 8rem;
-    font-size: medium;
-  }
-
-  .logo:hover {
-    color: grey;
-    cursor: pointer;
-  }
-
-  ul {
-    display: flex;
-    justify-content: space-around;
-    width: 15rem;
-    list-style-type: none;
-  }
-
-  a {
-    text-decoration: none;
-    color: aliceblue;
-    font-size: x-large;
-  }
-
-  a:hover {
-    color: grey;
-    cursor: pointer;
-  }
-
-  .toogle {
-    margin-right: 1rem;
-    position: relative;
-    display: inline-block;
-    padding: 16px;
-    font-size: 16px;
-  }
-
-  .toogle:hover {
-    color: grey;
-    transform: scale(1.3);
-  }
-
-  .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f1f1f1;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0, 0.2);
-    z-index: 1;
-    right: 0
-  }
-
-  .dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-  }
-
-  .dropdown-content a:hover {
-    background-color: #ddd;
-  }
-
-  .toogle:hover .dropdown-content {
-    display: block;
-  }
-
-
-
-
-
-
-  /* Sameetah part is main */
-
-
-
-
-  main {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-
-    padding: 80px 0;
-
-
-  }
-
-  .image-container {
-    display: flex;
-    justify-content: center;
-
-
-
-
-  }
-
-  .image-container img {
-    width: 300px;
-    /* Adjust this value to your desired size */
-    height: 300px;
-    /* Adjust this value to your desired size */
-    border-radius: 50%;
-    object-fit: cover;
-    margin: 0 40px;
-    /* Adjust this value to add spacing between images */
-
-    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3);
-
-
-
-
-  }
-
-  .image-container h2,
-  img {
-    opacity: 0.8;
-    position: relative;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-
-
-  }
-
-  .image-container .image:hover {
-    transition: transform 0.8s ease-in;
-    transform: scale(1.3);
-    /* Increase the value to make the image grow more */
-  }
-
-  .image-container .image:not(:hover) {
-    transition: transform 0.9s ease-in;
-    transform: scale(1);
-  }
-
-  .image {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    text-align: center;
-    gap: 50px 0;
-
-
-  }
-
-  .hidden {
-    display: none;
-  }
-
-
-  @media (max-width: 1139px) {
-    .image-container {
-      flex-direction: column;
-    }
-
-    .image {
-      height: 70vh;
-    }
-  }
+.image-container .image:hover {
+  transition: transform 0.8s ease-in;
+  transform: scale(1.3);
 }
 
 @media screen and (max-width: 750px) {
@@ -301,5 +158,22 @@ nav .dropdown.open a:hover {
     z-index: 20;
     height: 240px;
     flex-direction: column;
+  }
+}
+
+.image-container .image:not(:hover) {
+  transition: transform 0.9s ease-in;
+  transform: scale(1);
+}
+
+@media screen and (max-width: 1100px) {
+  .image-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .image {
+    gap: 40px 0;
+    height: 70vh;
   }
 }

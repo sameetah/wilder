@@ -65,11 +65,12 @@ nav>div>a:hover {
     cursor: pointer;
 }
 
+/* dropdown menu */
 nav .dropdown {
     display: none;
     position: absolute;
     right: 2rem;
-    top: 4rem;
+    top: 4.4rem;
     width: 250px;
     background: var(--bg-color);
     border-radius: 10px;

@@ -1,169 +1,213 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="galaxstyle.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Galaxies</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="galaxstyle.css" />
-  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <title>Galaxies</title>
-</head>
-
-<body>
-  <header>
-    <nav>
-      <div id="logo" class="section">
-        <h2>Wilder</h2>
+  <body>
+    <header>
+      <nav>
+        <div id="logo" class="section">
+          <h2>Wilder</h2>
+        </div>
+        <div id="home" class="section">
+          <a href="index.html">Home</a>
+        </div>
+        <div id="home" class="section">
+          <a href="facts.html">Facts</a>
+        </div>
+        <div id="home" class="section">
+          <a href="planet.html">Planets</a>
+        </div>
+        <div id="home" class="section">
+          <a href="Seven wonders/seven-wonders.html">Wonders Of World</a>
+        </div>
+        <div id="about" class="section">
+          <a
+            href="https://solarsystem.nasa.gov/planets/overview/"
+            target="_blank"
+            >More</a
+          >
+        </div>
+        <div id="menu" class="section">
+          <i class="bx bx-menu"></i>
+        </div>
+        <div class="dropdown">
+          <a href="index.html">Home</a>
+          <a href="facts.html">Facts</a>
+          <a href="planet.html">Planets</a>
+          <a href="Seven wonders/seven-wonders.html">Wonders Of World</a>
+          <a
+            href="https://solarsystem.nasa.gov/planets/overview/"
+            target="_blank"
+            >More</a
+          >
+        </div>
+      </nav>
+    </header>
+    <main>
+      <div class="mainImg container">
+        <img class="cover" src="pics/bci.jpg" />
       </div>
-      <div id="home" class="section">
-        <a href="index.html">Home</a>
-      </div>
-      <div id="home" class="section">
-        <a href="facts.html">Facts</a>
-      </div>
-      <div id="home" class="section">
-        <a href="planet.html">Planets</a>
-      </div>
-      <div id="home" class="section">
-        <a href="#">Wonders Of World</a>
-      </div>
-      <div id="about" class="section">
-        <a href="https://solarsystem.nasa.gov/planets/overview/" target="_blank">More</a>
-      </div>
-      <div id="menu" class="section">
-        <i class='bx bx-menu'></i>
-      </div>
-      <div class="dropdown">
-        <a href="index.html">Home</a>
-        <a href="facts.html">Facts</a>
-        <a href="planet.html">Planets</a>
-        <a href="#">Wonders Of World</a>
-        <a href="https://solarsystem.nasa.gov/planets/overview/" target="_blank">More</a>
-      </div>
-    </nav>
-  </header>
-  <main>
-    <div class="mainImg container">
-      <img class="cover" src="pics/bci.jpg" />
-    </div>
-    <ul class="center zone grid-wrapper">
-      <li class="box zone zone1">
-        <a href="https://universe.nasa.gov/galaxies/types/#otp_spiral_galaxies" target="_blank" class="card">
-          <img src="pics/Barred.jpg" />
-          <h2>Spiral Galaxies</h2>
-          <h4>
-            Our Milky Way is one example of a broad class of galaxies
-            defined by the presence of spiral arms. These galaxies
-            resemble giant rotating pinwheels with a pancake-like disk
-            of stars and a central bulge or tight concentration of
-            stars.
-          </h4>
-        </a>
-      </li>
-      <li class="box zone zone2">
-        <a href="https://universe.nasa.gov/galaxies/types/#otp_elliptical_galaxies" target="_blank" class="card">
-          <img src="pics/elliptical-galaxy.jpg" />
-          <h2>Elliptical Galaxies</h2>
-          <h4>
-            Unlike spirals, elliptical galaxies usually contain little gas and
-            dust and show very little organization or structure. The stars
-            orbit around the core in random directions and are generally older
-            than those in spiral galaxies since little of the gas needed to
-            form new stars remains. Scientists think elliptical galaxies
-            originate from collisions and mergers with spirals.
-          </h4>
-        </a>
-      </li>
-      <li class="box zone zone3">
-        <a href="https://universe.nasa.gov/galaxies/types/#otp_lenticular_galaxies" target="_blank" class="card">
-          <img src="pics/spiral.jpg" />
-          <h2>Lenticular Galaxies</h2>
-          <h4>
-            Lenticular galaxies are a kind of cross between spirals and
-            ellipticals. They have the central bulge and disk common to spiral
-            galaxies but no arms. But like ellipticals, lenticular galaxies
-            have older stellar populations and little ongoing star formation.
-          </h4>
-        </a>
-      </li>
-      <li class="box zone zone4">
-        <a href="https://universe.nasa.gov/galaxies/types/#otp_irregular_galaxies" target="_blank" class="card">
-          <img src="pics/optical-c.jpg" />
-          <h2>Irregular Galaxies</h2>
-          <h4>
-            Irregular galaxies have unusual shapes, like toothpicks, rings, or
-            even little groupings of stars. They range from dwarf irregular
-            galaxies with 100 million times the Sun’s mass to large ones
-            weighing 10 billion solar masses.
-          </h4>
-        </a>
-      </li>
-      <li class="box zone zone5">
-        <a href="https://universe.nasa.gov/galaxies/types/#otp_active_galaxies" target="_blank" class="card">
-          <img src="pics/blackholeswi.jpg" />
-          <h2>Active Galaxies</h2>
-          <h4>
-            Around 10% of known galaxies are active, which means their centers
-            appear more than 100 times brighter than the combined light of
-            their stars. They can be spiral, elliptical, or irregular. The
-            Milky Way is not currently an active galaxy, although it likely
-            experienced a burst of activity in the past few million years.
-          </h4>
-        </a>
-      </li>
-      <li class="box zone zone6">
-        <a href="https://universe.nasa.gov/galaxies/types/#otp_seyfert_galaxies" target="_blank" class="card">
-          <img src="pics/Seyfert-galaxy_1600.jpg" />
-          <h2>Seyfert Galaxies</h2>
-          <h4>
-            Seyfert galaxies, first identified in 1943 by American astronomer
-            Carl Seyfert, are the most common active galaxies and also exhibit
-            the lowest energies. All Seyferts look like normal galaxies in
-            visible light, but they emit considerable infrared radiation. When
-            observed in the infrared, some reveal bright emission from the
-            donut-shaped torus. Some also emit X-rays. Seyfert galaxies tend
-            to have lower radio luminosities, although some produce radio
-            jets.
-          </h4>
-        </a>
-      </li>
-      <li class="box zone zone7">
-        <a href="https://universe.nasa.gov/galaxies/types/#otp_quasars" target="_blank" class="card">
-          <img src="pics/quas.jpg" />
-          <h2>Quasars</h2>
-          <h4>
-            Quasars are the most luminous type of active galaxy. They emit
-            light across the electromagnetic spectrum, produce powerful
-            particle jets, and can radiate thousands of times the energy
-            emitted by a galaxy like the Milky Way. The nearest quasar, called
-            Markarian 231, is located some 600 million light-years away, but
-            we see many more quasars the farther we look.
-          </h4>
-        </a>
-      </li>
-      <li class="box zone zone8">
-        <a href="https://universe.nasa.gov/galaxies/types/#otp_blazars" target="_blank" class="card">
-          <img src="pics/blazar.jpg" />
-          <h2>Blazars</h2>
-          <h4>
-            Blazars produce light across the electromagnetic spectrum. Their
-            powerful jets point almost directly at Earth, so they appear
-            brighter than other active galaxies. Observatories on Earth can
-            sometimes detect high-energy particles – like neutrinos – produced
-            within the jets and trace them back to their home galaxy. This
-            information gives scientists a glimpse into the environment around
-            the blazar’s supermassive black hole
-          </h4>
-        </a>
-      </li>
-    </ul>
-  </main>
-  <footer class="foot"></footer>
-  <script src="script.js"></script>
-</body>
-
+      <ul class="center zone grid-wrapper">
+        <li class="box zone zone1">
+          <a
+            href="https://universe.nasa.gov/galaxies/types/#otp_spiral_galaxies"
+            target="_blank"
+            class="card"
+          >
+            <img src="pics/Barred.jpg" />
+            <h2>Spiral Galaxies</h2>
+            <h4>
+              Our Milky Way is one example of a broad class of galaxies defined
+              by the presence of spiral arms. These galaxies resemble giant
+              rotating pinwheels with a pancake-like disk of stars and a central
+              bulge or tight concentration of stars.
+            </h4>
+          </a>
+        </li>
+        <li class="box zone zone2">
+          <a
+            href="https://universe.nasa.gov/galaxies/types/#otp_elliptical_galaxies"
+            target="_blank"
+            class="card"
+          >
+            <img src="pics/elliptical-galaxy.jpg" />
+            <h2>Elliptical Galaxies</h2>
+            <h4>
+              Unlike spirals, elliptical galaxies usually contain little gas and
+              dust and show very little organization or structure. The stars
+              orbit around the core in random directions and are generally older
+              than those in spiral galaxies since little of the gas needed to
+              form new stars remains. Scientists think elliptical galaxies
+              originate from collisions and mergers with spirals.
+            </h4>
+          </a>
+        </li>
+        <li class="box zone zone3">
+          <a
+            href="https://universe.nasa.gov/galaxies/types/#otp_lenticular_galaxies"
+            target="_blank"
+            class="card"
+          >
+            <img src="pics/spiral.jpg" />
+            <h2>Lenticular Galaxies</h2>
+            <h4>
+              Lenticular galaxies are a kind of cross between spirals and
+              ellipticals. They have the central bulge and disk common to spiral
+              galaxies but no arms. But like ellipticals, lenticular galaxies
+              have older stellar populations and little ongoing star formation.
+            </h4>
+          </a>
+        </li>
+        <li class="box zone zone4">
+          <a
+            href="https://universe.nasa.gov/galaxies/types/#otp_irregular_galaxies"
+            target="_blank"
+            class="card"
+          >
+            <img src="pics/optical-c.jpg" />
+            <h2>Irregular Galaxies</h2>
+            <h4>
+              Irregular galaxies have unusual shapes, like toothpicks, rings, or
+              even little groupings of stars. They range from dwarf irregular
+              galaxies with 100 million times the Sun’s mass to large ones
+              weighing 10 billion solar masses.
+            </h4>
+          </a>
+        </li>
+        <li class="box zone zone5">
+          <a
+            href="https://universe.nasa.gov/galaxies/types/#otp_active_galaxies"
+            target="_blank"
+            class="card"
+          >
+            <img src="pics/blackholeswi.jpg" />
+            <h2>Active Galaxies</h2>
+            <h4>
+              Around 10% of known galaxies are active, which means their centers
+              appear more than 100 times brighter than the combined light of
+              their stars. They can be spiral, elliptical, or irregular. The
+              Milky Way is not currently an active galaxy, although it likely
+              experienced a burst of activity in the past few million years.
+            </h4>
+          </a>
+        </li>
+        <li class="box zone zone6">
+          <a
+            href="https://universe.nasa.gov/galaxies/types/#otp_seyfert_galaxies"
+            target="_blank"
+            class="card"
+          >
+            <img src="pics/Seyfert-galaxy_1600.jpg" />
+            <h2>Seyfert Galaxies</h2>
+            <h4>
+              Seyfert galaxies, first identified in 1943 by American astronomer
+              Carl Seyfert, are the most common active galaxies and also exhibit
+              the lowest energies. All Seyferts look like normal galaxies in
+              visible light, but they emit considerable infrared radiation. When
+              observed in the infrared, some reveal bright emission from the
+              donut-shaped torus. Some also emit X-rays. Seyfert galaxies tend
+              to have lower radio luminosities, although some produce radio
+              jets.
+            </h4>
+          </a>
+        </li>
+        <li class="box zone zone7">
+          <a
+            href="https://universe.nasa.gov/galaxies/types/#otp_quasars"
+            target="_blank"
+            class="card"
+          >
+            <img src="pics/quas.jpg" />
+            <h2>Quasars</h2>
+            <h4>
+              Quasars are the most luminous type of active galaxy. They emit
+              light across the electromagnetic spectrum, produce powerful
+              particle jets, and can radiate thousands of times the energy
+              emitted by a galaxy like the Milky Way. The nearest quasar, called
+              Markarian 231, is located some 600 million light-years away, but
+              we see many more quasars the farther we look.
+            </h4>
+          </a>
+        </li>
+        <li class="box zone zone8">
+          <a
+            href="https://universe.nasa.gov/galaxies/types/#otp_blazars"
+            target="_blank"
+            class="card"
+          >
+            <img src="pics/blazar.jpg" />
+            <h2>Blazars</h2>
+            <h4>
+              Blazars produce light across the electromagnetic spectrum. Their
+              powerful jets point almost directly at Earth, so they appear
+              brighter than other active galaxies. Observatories on Earth can
+              sometimes detect high-energy particles – like neutrinos – produced
+              within the jets and trace them back to their home galaxy. This
+              information gives scientists a glimpse into the environment around
+              the blazar’s supermassive black hole
+            </h4>
+          </a>
+        </li>
+      </ul>
+    </main>
+    <footer class="foot"></footer>
+    <script src="script.js"></script>
+  </body>
 </html>

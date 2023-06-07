@@ -17,30 +17,29 @@
 }
 
 /* matching navbar for all the files */
-header>nav {
+header > nav {
   display: flex;
   width: 100%;
   border: 1px solid var(--border-color);
   background-color: var(--bg-color);
 }
 
-header>nav .section {
-  padding: .50rem 2rem;
+header > nav .section {
+  padding: 0.5rem 2rem;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 1;
   border-left: 1px solid var(--border-color);
   text-decoration: none;
-
 }
 
-header>nav>div>a {
+header > nav > div > a {
   color: var(--main-color);
-  transition: transform .2s ease-in-out;
+  transition: transform 0.2s ease-in-out;
 }
 
-nav>div>a:hover {
+nav > div > a:hover {
   color: var(--t-color);
   transform: translateY(-10%);
 }
@@ -51,7 +50,6 @@ nav>div>a:hover {
   font-size: var(--logo);
   text-decoration: none;
   color: var(--main-color);
-
 }
 
 #menu {
@@ -76,20 +74,18 @@ nav .dropdown {
   z-index: 10;
 }
 
-nav .dropdown>a {
+nav .dropdown > a {
   padding: 1rem 0 0 0;
 }
 
-
 nav .dropdown.open a {
-  transition: transform .2s ease-in-out;
+  transition: transform 0.2s ease-in-out;
 }
 
 nav .dropdown.open a:hover {
   color: var(--t-color);
   transform: translateY(-10%);
 }
-
 
 /* Sameetah part is main */
 main {
@@ -114,6 +110,7 @@ main {
   text-align: center;
   gap: 50px 0;
   height: 70vh;
+  cursor: pointer;
 }
 
 .image img {
@@ -144,7 +141,7 @@ img {
 
 @media screen and (max-width: 850px) {
 
-  header>nav .section {
+  header > nav .section {
     display: none;
   }
 

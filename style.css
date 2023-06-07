@@ -1,5 +1,10 @@
 :root {
-  background-color: #D3D3D3;
+  --main-color: #fff;
+  --bg-color: rgb(12, 17, 32);
+  --border-color: rgba(255, 255, 255, 0.1);
+  --text-size: 14px;
+  --logo: 30px;
+  --t-color: #e83f6f;
 }
 
 
@@ -8,115 +13,191 @@
   padding: 0;
   box-sizing: border-box;
   font-family: sans-serif;
+  text-decoration: none;
 }
+
+/* matching navbar for all the files */
+header>nav {
+  display: flex;
+  width: 100%;
+  border: 1px solid var(--border-color);
+  background-color: var(--bg-color);
+}
+
+header>nav .section {
+  padding: .50rem 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1;
+  border-left: 1px solid var(--border-color);
+  text-decoration: none;
+
+}
+
+header>nav>div>a {
+  color: var(--main-color);
+  transition: transform .2s ease-in-out;
+}
+
+nav>div>a:hover {
+  color: var(--t-color);
+  transform: translateY(-10%);
+}
+
+#logo {
+  flex-grow: 1;
+  justify-content: flex-start;
+  font-size: var(--logo);
+  text-decoration: none;
+  color: var(--main-color);
+
+}
+
+#menu {
+  color: var(--main-color);
+  display: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* Dropdown menu */
+
+nav .dropdown {
+  display: none;
+  position: absolute;
+  right: 2rem;
+  top: 4rem;
+  width: 250px;
+  background: var(--bg-color);
+  border-radius: 10px;
+  overflow: hidden;
+  height: 0;
+  z-index: 10;
+}
+
+nav .dropdown>a {
+  padding: 1rem 0 0 0;
+}
+
+
+nav .dropdown.open a {
+  transition: transform .2s ease-in-out;
+}
+
+nav .dropdown.open a:hover {
+  color: var(--t-color);
+  transform: translateY(-10%);
+}
+
 
 /* Alberto part is header*/
 
 @media only screen and (max-width: 600px) {
   .navbar {
-      justify-content: space-between;
+    justify-content: space-between;
   }
 
   .logo {
-      transform: scale(0.8);
+    transform: scale(0.8);
   }
 
   .toggle {
-      display: inline-block;
+    display: inline-block;
   }
 
   ul {
-      display: none;
+    display: none;
   }
 
 
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  color: aliceblue;
-  background-color: rgb(8, 6, 6);
-  height: 4rem;
-  align-items: center;
-  
-}
-.logo {
-  margin: 8rem;
-  font-size: medium;
-}
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    color: aliceblue;
+    background-color: rgb(8, 6, 6);
+    height: 4rem;
+    align-items: center;
 
-.logo:hover {
-      color:grey;
-      cursor: pointer;
-}
+  }
 
-ul {
-  display: flex;
-  justify-content: space-around;
-  width: 15rem;
-  list-style-type:none;
-}
+  .logo {
+    margin: 8rem;
+    font-size: medium;
+  }
 
-a{
-  text-decoration: none;
-  color: aliceblue;
-  font-size: x-large; 
-}
+  .logo:hover {
+    color: grey;
+    cursor: pointer;
+  }
 
-a:hover {
-      color:grey;
-      cursor: pointer;
-}
+  ul {
+    display: flex;
+    justify-content: space-around;
+    width: 15rem;
+    list-style-type: none;
+  }
 
-.toogle {
-  margin-right: 1rem;
-  position: relative;
-  display: inline-block;
-  padding: 16px;
-  font-size: 16px;
-}
+  a {
+    text-decoration: none;
+    color: aliceblue;
+    font-size: x-large;
+  }
 
-.toogle:hover {
-  color: grey;
-  transform: scale(1.3);
-}
+  a:hover {
+    color: grey;
+    cursor: pointer;
+  }
 
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f1f1f1;
-  min-width:160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0,0.2);
-  z-index: 1;
-  right:0
-  
-}
+  .toogle {
+    margin-right: 1rem;
+    position: relative;
+    display: inline-block;
+    padding: 16px;
+    font-size: 16px;
+  }
 
-.dropdown-content a {
-  color: black;
-  padding: 12px 16px;
-  text-decoration:none;
-  display:block;
-}
+  .toogle:hover {
+    color: grey;
+    transform: scale(1.3);
+  }
 
-.dropdown-content a:hover {
-  background-color: #ddd;
-}
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0, 0.2);
+    z-index: 1;
+    right: 0
+  }
 
-.toogle:hover .dropdown-content {
-  display: block;
-}
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
 
+  .dropdown-content a:hover {
+    background-color: #ddd;
+  }
 
+  .toogle:hover .dropdown-content {
+    display: block;
+  }
 
 
 
 
-/* Sameetah part is main */
+
+
+  /* Sameetah part is main */
 
 
 
 
-main {
+  main {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -125,20 +206,22 @@ main {
     padding: 80px 0;
 
 
-}
+  }
 
-.image-container {
+  .image-container {
     display: flex;
     justify-content: center;
-    
- 
-    
-  
+
+
+
+
   }
-  
+
   .image-container img {
-    width: 300px; /* Adjust this value to your desired size */
-    height: 300px; /* Adjust this value to your desired size */
+    width: 300px;
+    /* Adjust this value to your desired size */
+    height: 300px;
+    /* Adjust this value to your desired size */
     border-radius: 50%;
     object-fit: cover;
     margin: 0 40px;
@@ -149,28 +232,29 @@ main {
 
 
 
-}
+  }
 
-.image-container h2,
-img {
+  .image-container h2,
+  img {
     opacity: 0.8;
     position: relative;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-   
-    
+
+
   }
-  .image-container .image:hover  {
+
+  .image-container .image:hover {
     transition: transform 0.8s ease-in;
     transform: scale(1.3);
     /* Increase the value to make the image grow more */
-}
+  }
 
-.image-container .image:not(:hover) {
+  .image-container .image:not(:hover) {
     transition: transform 0.9s ease-in;
     transform: scale(1);
-}
+  }
 
-.image {
+  .image {
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -178,18 +262,44 @@ img {
     gap: 50px 0;
 
 
+  }
+
+  .hidden {
+    display: none;
+  }
+
+
+  @media (max-width: 1139px) {
+    .image-container {
+      flex-direction: column;
+    }
+
+    .image {
+      height: 70vh;
+    }
+  }
 }
 
-.hidden{display: none;}
+@media screen and (max-width: 750px) {
 
+  header>nav .section {
+    display: none;
+  }
 
-@media (max-width: 1139px) {
-    .image-container {
-        flex-direction: column;
-    }
+  #logo {
+    display: flex;
+  }
 
-    .image{
-        height: 70vh;
-    }
+  #menu {
+    display: flex;
+  }
+
+  .dropdown.open {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    z-index: 20;
+    height: 240px;
+    flex-direction: column;
   }
 }

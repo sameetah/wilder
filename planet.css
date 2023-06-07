@@ -3,7 +3,7 @@
     --bg-color: rgb(12, 17, 32);
     --border-color: rgba(255, 255, 255, 0.1);
     --text-size: 14px;
-    --logo: 40px;
+    --logo: 30px;
     --t-color: #e83f6f;
 }
 
@@ -54,6 +54,9 @@ nav>div>a:hover {
     flex-grow: 1;
     justify-content: flex-start;
     font-size: var(--logo);
+    text-decoration: none;
+    color: var(--main-color);
+
 }
 
 #menu {
@@ -174,6 +177,8 @@ main>section .facts p {
     padding: .6rem;
     line-height: 1.5;
     font-weight: 200;
+    /*     font-size: 0.9rem;
+ */
 }
 
 main>section .facts h3 {

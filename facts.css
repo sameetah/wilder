@@ -3,7 +3,7 @@
     --bg-color: rgb(12, 17, 32);
     --border-color: rgba(255, 255, 255, 0.1);
     --text-size: 14px;
-    --logo: 40px;
+    --logo: 30px;
     --t-color: #e83f6f;
 }
 
@@ -21,7 +21,6 @@ body {
  */
     background-size: cover;
     background-color: var(--bg-color);
-
     display: block;
     text-align: center;
 }
@@ -56,6 +55,9 @@ nav>div>a:hover {
     flex-grow: 1;
     justify-content: flex-start;
     font-size: var(--logo);
+    text-decoration: none;
+    color: var(--main-color);
+
 }
 
 #menu {
@@ -70,8 +72,8 @@ nav .dropdown {
     right: 2rem;
     top: 4rem;
     width: 250px;
-    background: black;
-    border-radius: 10px;
+    background: var(--bg-color);
+    border-radius: 0.8rem;
     overflow: hidden;
     height: 0;
     z-index: 10;

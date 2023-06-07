@@ -1,0 +1,301 @@
+:root {
+    --main-color: #fff;
+    --bg-color: rgb(12, 17, 32);
+    --border-color: rgba(255, 255, 255, 0.1);
+    --text-size: 14px;
+    --logo: 40px;
+    --t-color: #e83f6f;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+    color: var(--main-color);
+    text-decoration: none;
+}
+
+body {
+    background-color: var(--bg-color);
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* top>Navbar */
+nav {
+    display: flex;
+    width: 100%;
+    border: 1px solid var(--border-color);
+}
+
+nav .section {
+    padding: .50rem 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1;
+    border-left: 1px solid var(--border-color);
+
+}
+
+nav>div>a {
+    transition: transform .2s ease-in-out;
+}
+
+nav>div>a:hover {
+    color: var(--t-color);
+    transform: translateY(-10%);
+}
+
+#logo {
+    flex-grow: 1;
+    justify-content: flex-start;
+    font-size: var(--logo);
+}
+
+#menu {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+nav .dropdown {
+    display: none;
+    position: absolute;
+    right: 2rem;
+    top: 4rem;
+    width: 250px;
+    background: var(--bg-color);
+    border-radius: 10px;
+    overflow: hidden;
+    height: 0;
+    z-index: 10;
+}
+
+nav .dropdown>a {
+    padding: 1rem 0 0 0;
+}
+
+
+nav .dropdown.open a {
+    transition: transform .2s ease-in-out;
+}
+
+nav .dropdown.open a:hover {
+    color: var(--t-color);
+    transform: translateY(-10%);
+}
+
+
+/* Main setting for section  */
+main {
+    flex-grow: 1;
+    position: relative;
+}
+
+main>section {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 2fr 90px;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+}
+
+main>section .section-section {
+    height: 100%;
+    border: 1px solid var(--border-color);
+}
+
+main>section h2 {
+    text-align: center;
+    margin-top: .2rem;
+}
+
+main>section .title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: var(--logo);
+}
+
+main>section .nav {
+    display: flex;
+    justify-content: space-around;
+}
+
+/* Setting for transition slider */
+main>section[data-status="inactive"] {
+    transform: translateX(-100%);
+    transition: none;
+}
+
+main>section[data-status="active"] {
+    transform: translateX(0%);
+    transition: transform 300ms ease;
+}
+
+main>section[data-status="before"] {
+    transform: translateX(-100%);
+}
+
+main>section[data-status="after"] {
+    transform: translateX(100%);
+}
+
+main>section[data-status="becoming-active-from-before"] {
+    transform: translateX(-100%);
+    transition: none;
+}
+
+main>section[data-status="becoming-active-from-after"] {
+    transform: translateX(100%);
+    transition: none;
+}
+
+/* Setting for buttons */
+main>section .nav .btn {
+    font-size: var(--logo);
+    border: 1px solid var(--border-color);
+    background-color: var(--bg-color);
+    cursor: pointer;
+    width: 100%;
+
+}
+
+/* Setting for innex text */
+main>section .facts p {
+    padding: .6rem;
+    line-height: 1.5;
+    font-weight: 200;
+}
+
+main>section .facts h3 {
+    color: #e83f6f;
+    text-align: center;
+    padding-top: 10px;
+    font-weight: bold;
+}
+
+main>section .title h2 {
+    color: #e83f6f;
+
+}
+
+/* Image setting */
+main>section .image-mercury {
+    background-image: url("planet/mercury.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+main>section .image-venus {
+    background-image: url("planet/venus.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+main>section .image-earth {
+    background-image: url("planet/earth.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+main>section .image-mars {
+    background-image: url("planet/mars.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+main>section .image-jupiter {
+    background-image: url("planet/jupiter.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+main>section .image-saturn {
+    background-image: url("planet/saturn.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+main>section .image-uranus {
+    background-image: url("planet/uranus.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+main>section .image-neptune {
+    background-image: url("planet/neptune.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+/* Responsive */
+@media screen and (max-width: 1200px) {
+    main>section {
+        grid-template-columns: none;
+        grid-template-rows: 1fr 0.10fr 1fr;
+    }
+
+    main>section .title {
+        padding: 0.20rem;
+        margin: 0;
+        font-size: 18px;
+    }
+
+    main>section .facts {
+        font-size: 12px;
+    }
+
+    main>section p {
+        line-height: .4;
+    }
+
+    main>section .image-mercury {
+        order: 1;
+    }
+
+    main>section .title {
+        order: 2;
+    }
+
+    main>section .facts {
+        order: 3;
+    }
+
+    main>section .nav {
+        order: 4;
+        min-height: 50px;
+    }
+
+}
+
+@media screen and (max-width: 750px) {
+
+    nav .section {
+        display: none;
+    }
+
+    #logo {
+        display: flex;
+    }
+
+    #menu {
+        display: flex;
+    }
+
+    nav .dropdown.open {
+        height: 240px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-direction: column;
+    }
+}

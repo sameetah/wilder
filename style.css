@@ -142,7 +142,7 @@ img {
   transform: scale(1.2);
 }
 
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 850px) {
 
   header>nav .section {
     display: none;

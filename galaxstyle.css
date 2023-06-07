@@ -3,7 +3,7 @@
     --bg-color: rgb(12, 17, 32);
     --border-color: rgba(255, 255, 255, 0.1);
     --text-size: 14px;
-    --logo: 40px;
+    --logo: 30px;
     --t-color: #e83f6f;
 }
 
@@ -73,6 +73,9 @@ nav>div>a:hover {
     flex-grow: 1;
     justify-content: flex-start;
     font-size: var(--logo);
+    text-decoration: none;
+    color: var(--main-color);
+
 }
 
 #menu {
@@ -88,7 +91,7 @@ nav .dropdown {
     display: none;
     position: absolute;
     right: 2rem;
-    top: 4rem;
+    top: 4.4rem;
     width: 250px;
     background: var(--bg-color);
     border-radius: 10px;
@@ -235,7 +238,7 @@ footer {
     }
 }
 
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 850px) {
 
     header>nav .section {
         display: none;

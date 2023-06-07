@@ -10,10 +10,10 @@
 * {
   margin: 0;
   padding: 0;
-
   box-sizing: border-box;
   font-family: sans-serif;
   text-decoration: none;
+  overflow-x: hidden;
 }
 
 /* matching navbar for all the files */
@@ -92,14 +92,15 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-
-  padding: 80px 0;
+  background-color: var(--bg-color);
+  padding: 72px 0;
 }
 
 .image-container {
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
 }
 
 .image {
@@ -122,6 +123,10 @@ main {
   box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3);
 }
 
+.image-container h2 {
+  color: var(--main-color);
+}
+
 .image-container h2,
 img {
   opacity: 0.8;
@@ -131,10 +136,11 @@ img {
 
 .image-container .image:hover {
   transition: transform 0.8s ease-in;
-  transform: scale(1.3);
+  transform: scale(1.2);
 }
 
 @media screen and (max-width: 850px) {
+
   header > nav .section {
     display: none;
   }

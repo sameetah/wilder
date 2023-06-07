@@ -173,7 +173,7 @@ main .card .content a {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
 }
 
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 850px) {
 
     nav .section {
         display: none;

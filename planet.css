@@ -283,7 +283,7 @@ main>section .image-neptune {
 
 }
 
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 850px) {
 
     nav .section {
         display: none;

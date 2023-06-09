@@ -1,5 +1,5 @@
 :root {
-    --main-color: #fff;
+    --main-color: #ffffff;
     --bg-color: rgb(12, 17, 32);
     --border-color: rgba(255, 255, 255, 0.1);
     --text-size: 14px;
@@ -15,13 +15,6 @@
     text-decoration: none;
 }
 
-body {
-    background-color: #bbb;
-    width: 100%;
-}
-
-
-
 .zone {
     cursor: pointer;
     color: #FFF;
@@ -33,14 +26,14 @@ body {
 
 .zone:hover {
 
-    box-shadow: rgba(0, 0, 0, 0.8) 0px 5px 15px, inset rgba(0, 0, 0, 0.15) 0px -10px 20px;
+    box-shadow: rgba(159, 157, 157, 0.8) 0px 5px 15px, inset rgba(0, 0, 0, 0.15) 0px -10px 20px;
 }
 
 .box:hover {
-    transform: scale(1.1);
+    transform: scale(1.04);
 }
 
-/* Navbar */
+/* matching navbar for all the files */
 header>nav {
     display: flex;
     width: 100%;
@@ -49,19 +42,22 @@ header>nav {
 }
 
 header>nav .section {
-    padding: .50rem 2rem;
+    padding: 0.5rem 2rem;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 1;
     border-left: 1px solid var(--border-color);
     text-decoration: none;
-
 }
 
 header>nav>div>a {
     color: var(--main-color);
-    transition: transform .2s ease-in-out;
+    transition: transform 0.2s ease-in-out;
+}
+
+.bx-x:before {
+    color: #e83f6f;
 }
 
 nav>div>a:hover {
@@ -75,7 +71,6 @@ nav>div>a:hover {
     font-size: var(--logo);
     text-decoration: none;
     color: var(--main-color);
-
 }
 
 #menu {
@@ -100,20 +95,14 @@ nav .dropdown {
     z-index: 10;
 }
 
-nav .dropdown>a {
-    padding: 1rem 0 0 0;
-}
-
-
 nav .dropdown.open a {
-    transition: transform .2s ease-in-out;
+    transition: transform 0.2s ease-in-out;
 }
 
 nav .dropdown.open a:hover {
     color: var(--t-color);
     transform: translateY(-10%);
 }
-
 
 
 
@@ -138,14 +127,18 @@ ul>li {
     background-repeat: no-repeat;
     height: 100%;
     width: 100%;
-    /*     margin-bottom: 50px;  Removed because it was causing problem
- */
+}
+
+main {
+    background-color: var(--bg-color);
 }
 
 .grid-wrapper {
     display: grid;
-    grid-gap: 40px;
-    margin-inline: 50px;
+    margin-top: 20px;
+    grid-gap: 30px;
+    margin-inline: 25px;
+    border-style: none;
     grid-template-areas:
         "zone1 zone2"
         "zone3 zone4"
@@ -155,12 +148,15 @@ ul>li {
 }
 
 
+
+
 .box {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    background-color: #444;
-    padding: 1rem;
+    background-color: rgba(101, 101, 101, 0.644);
+    border: 1px solid var(--border-color);
+    border-radius: 25px;
 }
 
 .zone {
@@ -168,20 +164,26 @@ ul>li {
 }
 
 
-li>a>h2 {
+li>a>h2,
+li>a>h4 {
 
     margin-bottom: 5px;
+    color: #ffffff;
+    text-align: justify;
+    color: #ffffff;
 }
 
-li>a>h4 {
-    text-align: justify;
+
+li>a>h2:hover,
+li>a>h4:hover {
+    color: var(--t-color);
 }
 
 .card {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-evenly;
     height: 100%;
 }
 
@@ -190,18 +192,122 @@ li>a>h4 {
     height: 50%;
 }
 
-footer {
-    text-align: right;
-    background-color: black;
-    padding: 1.5rem;
-    margin-top: 40px;
+.container5 {
+    position: relative;
+    text-align: center;
+    color: white;
+    margin-top: 50px;
 }
+
+
+.skillTest {
+    font-size: 2rem;
+    background: -webkit-linear-gradient(90deg, rgba(30, 10, 0, 1) 13%, rgba(237, 94, 94, 1) 39%, rgba(166, 0, 255, 1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 15px;
+    margin-top: 100px;
+    text-align: center;
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    ;
+}
+
+.testSkill {
+    font-size: 1.5rem;
+    color: white;
+    margin-bottom: 100px;
+    text-align: center;
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#grid-wrapper2 {
+    margin-inline: 20px;
+    padding-inline: 10rem;
+
+
+}
+
+
+
+.wrapper2 {
+    display: grid;
+    margin-top: 20px;
+    grid-gap: 25px;
+    margin-inline: 20px;
+    padding: 2rem;
+    background-color: rgba(101, 101, 101, 0.644);
+    ;
+    border: 1px solid var(--border-color);
+    border-radius: 25px;
+    grid-template-areas:
+        "Q Q"
+        "zone9 zone10"
+        "zone11 zone12";
+    grid-template-columns: 1fr 1fr;
+    color: #ffffff;
+
+}
+
+
+
+.Q {
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+.zone9,
+.zone11 {
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+
+.zone10,
+.zone12 {
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+
+.result {
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    padding-right: 14rem;
+
+}
+
+.result>input {
+    background-color: rgba(101, 101, 101, 0.644);
+    color: #ffffff;
+    padding: 1rem 1.6rem;
+    margin-block: 30px;
+    border-radius: 25px;
+    margin-inline: 30px;
+
+}
+
+.result>input:hover {
+    background-color: #e83f6f;
+
+}
+
+
+.hide {
+    display: none;
+}
+
 
 
 
 @media only screen and (max-width: 600px) {
 
-    .cover {
+    .cover,
+    .cover2 {
         width: 100%;
 
     }
@@ -211,7 +317,7 @@ footer {
     }
 
     #logo {
-        transform: scale(0.8);
+        transform: scale(0.6);
     }
 
     .toogle {
@@ -222,13 +328,13 @@ footer {
         display: none;
     }
 
-    .grid-wrapper {
+    .grid-wrapper,
+    #grid-wrapper2 {
         margin: inline 20px;
-        ;
         display: flex;
         align-items: center;
         flex-direction: column;
-
+        width: 80%;
     }
 
     li>a>h2 {
@@ -236,10 +342,20 @@ footer {
         text-align: center;
         margin-top: 10px;
     }
+
+    .wrapper2 {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        background-color: rgba(101, 101, 101, 0.644);
+        border: 1px solid var(--border-color);
+        border-radius: 25px;
+        justify-content: center;
+
+    }
 }
 
 @media screen and (max-width: 850px) {
-
     header>nav .section {
         display: none;
     }
@@ -254,7 +370,8 @@ footer {
 
     .dropdown.open {
         display: flex;
-        justify-content: flex-start;
+        justify-content: space-evenly;
+        border: 3px solid var(--t-color);
         align-items: center;
         z-index: 20;
         height: 240px;

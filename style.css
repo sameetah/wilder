@@ -16,15 +16,22 @@
   overflow-x: hidden;
 }
 
+body {
+  /*   height: calc(100vh - 0.5rem);
+ */
+  background-color: var(--bg-color);
+
+}
+
 /* matching navbar for all the files */
-header > nav {
+header>nav {
   display: flex;
   width: 100%;
   border: 1px solid var(--border-color);
   background-color: var(--bg-color);
 }
 
-header > nav .section {
+header>nav .section {
   padding: 0.5rem 2rem;
   display: flex;
   justify-content: center;
@@ -34,12 +41,12 @@ header > nav .section {
   text-decoration: none;
 }
 
-header > nav > div > a {
+header>nav>div>a {
   color: var(--main-color);
   transition: transform 0.2s ease-in-out;
 }
 
-nav > div > a:hover {
+nav>div>a:hover {
   color: var(--t-color);
   transform: translateY(-10%);
 }
@@ -74,10 +81,6 @@ nav .dropdown {
   z-index: 10;
 }
 
-nav .dropdown > a {
-  padding: 1rem 0 0 0;
-}
-
 nav .dropdown.open a {
   transition: transform 0.2s ease-in-out;
 }
@@ -87,13 +90,18 @@ nav .dropdown.open a:hover {
   transform: translateY(-10%);
 }
 
+.bx-x:before {
+  color: #e83f6f;
+}
+
 /* Sameetah part is main */
 main {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: var(--bg-color);
-  padding: 72px 0;
+  margin-top: 5rem;
+  /*   height: calc(100vh - 4.4rem);
+ */
 }
 
 .image-container {
@@ -141,7 +149,7 @@ img {
 
 @media screen and (max-width: 850px) {
 
-  header > nav .section {
+  header>nav .section {
     display: none;
   }
 
@@ -155,8 +163,9 @@ img {
 
   .dropdown.open {
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-evenly;
     align-items: center;
+    border: 3px solid var(--t-color);
     z-index: 20;
     height: 240px;
     flex-direction: column;

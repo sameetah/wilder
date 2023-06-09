@@ -361,11 +361,6 @@ footer {
   object-position: center 50%;
 }
 
-#newMainElement {
-  background-color: lightblue;
-  padding: 1rem;
-}
-
 @media screen and (max-width: 770px) {
   header > nav .section {
     display: none;

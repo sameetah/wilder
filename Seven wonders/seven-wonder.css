@@ -23,19 +23,22 @@ header>nav {
 }
 
 header>nav .section {
-  padding: .50rem 2rem;
+  padding: 0.5rem 2rem;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 1;
   border-left: 1px solid var(--border-color);
   text-decoration: none;
-
 }
 
 header>nav>div>a {
   color: var(--main-color);
-  transition: transform .2s ease-in-out;
+  transition: transform 0.2s ease-in-out;
+}
+
+.bx-x:before {
+  color: #e83f6f;
 }
 
 nav>div>a:hover {
@@ -49,7 +52,6 @@ nav>div>a:hover {
   font-size: var(--logo);
   text-decoration: none;
   color: var(--main-color);
-
 }
 
 #menu {
@@ -74,20 +76,18 @@ nav .dropdown {
   z-index: 10;
 }
 
-nav .dropdown>a {
-  padding: 1rem 0 0 0;
+.bx-x:before {
+  color: var(--t-color);
 }
 
-
 nav .dropdown.open a {
-  transition: transform .2s ease-in-out;
+  transition: transform 0.2s ease-in-out;
 }
 
 nav .dropdown.open a:hover {
   color: var(--t-color);
   transform: translateY(-10%);
 }
-
 
 body,
 html {
@@ -98,7 +98,7 @@ html {
 }
 
 .map-container {
-  background-color: var(--main-color);
+  background-color: var(--bg-color);
 }
 
 .map-container {
@@ -202,7 +202,7 @@ html {
   align-items: center;
   position: relative;
   margin-top: -30%;
-  margin-bottom: -10%;
+  margin-bottom: -10px;
   left: 50%;
   transform: translate(-50%, -50%);
   max-width: 600px;
@@ -211,9 +211,9 @@ html {
   background: #008080;
   z-index: 2;
   opacity: 1;
-
+  line-height: 1.5rem;
   border-radius: 10px;
-  box-shadow: 0 0 50px 20px var(--main-color);
+  box-shadow: 0 0 50px 20px var(--bg-color);
 
   font-size: 18px;
   text-align: center;
@@ -221,14 +221,14 @@ html {
 
 .popup-after a {
   text-decoration: none;
-  color: white;
+  color: var(--bg-color);
+  margin-top: 2rem;
   background: var(--main-color);
   width: 5rem;
   height: 2rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 0 auto;
 }
 
 #main-element .active {
@@ -238,16 +238,16 @@ html {
 }
 
 footer {
-  background-color: var(--main-color);
+  background-color: var(--bg-color);
   padding: 1rem;
-  color: #fff;
 }
 
 .wonder-box {
   position: relative;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+
   overflow: hidden;
-  background-color: #333;
+  box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.5);
 }
 
 .wonder-box img {
@@ -370,8 +370,7 @@ footer {
   padding: 1rem;
 }
 
-@media screen and (max-width: 770px) {
-
+@media screen and (max-width: 850px) {
   header>nav .section {
     display: none;
   }
@@ -386,8 +385,9 @@ footer {
 
   .dropdown.open {
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-evenly;
     align-items: center;
+    border: 3px solid var(--t-color);
     z-index: 20;
     height: 240px;
     flex-direction: column;

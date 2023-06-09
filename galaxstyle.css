@@ -251,8 +251,6 @@ li>a>h4:hover {
         "zone11 zone12";
     grid-template-columns: 1fr 1fr;
     color: #ffffff;
-    width: 300px;
-
 
 }
 
@@ -353,6 +351,7 @@ li>a>h4:hover {
         border: 1px solid var(--border-color);
         border-radius: 25px;
         justify-content: center;
+
     }
 }
 

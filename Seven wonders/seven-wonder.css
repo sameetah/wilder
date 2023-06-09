@@ -37,10 +37,6 @@ header>nav>div>a {
   transition: transform 0.2s ease-in-out;
 }
 
-.bx-x:before {
-  color: #e83f6f;
-}
-
 nav>div>a:hover {
   color: var(--t-color);
   transform: translateY(-10%);
@@ -202,7 +198,7 @@ html {
   align-items: center;
   position: relative;
   margin-top: -30%;
-  margin-bottom: -10px;
+  margin-bottom: -10vh;
   left: 50%;
   transform: translate(-50%, -50%);
   max-width: 600px;
@@ -316,7 +312,14 @@ footer {
   opacity: 1;
 }
 
-@media (min-width: 768px) {
+/*work later to also make popupsection appear in small screen. But for now, display set to none*/
+@media (max-width: 786px) {
+  .popup-after {
+    display: none;
+  }
+}
+
+@media (min-width: 788px) {
   .wonders-grid {
     display: grid;
 
@@ -363,11 +366,6 @@ footer {
   max-width: 100%;
   object-fit: cover;
   object-position: center 50%;
-}
-
-#newMainElement {
-  background-color: lightblue;
-  padding: 1rem;
 }
 
 @media screen and (max-width: 850px) {

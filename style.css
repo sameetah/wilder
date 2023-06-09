@@ -46,10 +46,6 @@ header>nav>div>a {
   transition: transform 0.2s ease-in-out;
 }
 
-.bx-x:before {
-  color: #e83f6f;
-}
-
 nav>div>a:hover {
   color: var(--t-color);
   transform: translateY(-10%);

@@ -8,7 +8,7 @@ images.forEach((image, index) => {
             window.location.href = "planet.html";
 
         else if (index === 1)
-            window.location.href = "Seven wonders/Seven wonders/seven-wonders.html";
+            window.location.href = "Seven wonders/seven-wonders.html";
 
         else
             window.location.href = "galax.html";
